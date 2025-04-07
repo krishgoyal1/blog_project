@@ -1,0 +1,61 @@
+body {
+    text-align:center;
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.text{
+    color:red;
+    font-weight:bold;
+    font-family: 'Poppins', sans-serif;
+}
+.texta{
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px #ababab;
+  }
+.post{
+    font-family: 'Abril Fatface', serif;
+    font-size: 20px;
+   
+}
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color : blue;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+
+}
+.bg1{
+    background-color: #F5F5DC;
+    padding: 10px 0px 10px 0px;
+}

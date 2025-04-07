@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1 class = "texta">Welcome, {{ session['username'] }}!</h1>
+
+<h2 class = "text bg1">Blog Posts</h2>
+
+{% for post in posts %}
+    <div class="post">
+
+        <p><strong>Posted by:</strong> {{ post['username'] }} | <strong>Posted on:</strong> {{ post['created_at'] }}</p>
+        <p>{{ post['content'] }}</p>
+    </div>
+{% else %}
+    <p>No posts yet!</p>
+{% endfor %}
+<div class = "link-container">
+<a href="{{ url_for('post') }}" class = "link">Create New Post</a>
+<a href="{{ url_for('logout') }}" class = "link">Logout</a>
+</div>
+</body>
+</html>

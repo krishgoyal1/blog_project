@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Blog</h1>
+
+    {% if 'user_id' in session %}
+        <p>Welcome, {{ session['username'] }}!</p>
+        <a href="{{ url_for('dashboard') }}">Go to Dashboard</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <a href="{{ url_for('signup') }}">Sign Up</a> |
+        <a href="{{ url_for('login') }}">Login</a>
+    {% endif %}
+</body>
+</html>
